@@ -154,3 +154,22 @@ function tu_custom_copyright() {
     <?php
 }
 add_filter( 'generate_copyright','tu_custom_copyright' );
+
+/**
+ * Personalizar el panel de administración para el cliente
+ * Ocultamos secciones innecesarias para evitar confusiones
+ */
+function blindar_panel_cliente_servitec() {
+    // Solo actuamos si el usuario NO es administrador
+    if ( !current_user_can( 'manage_options' ) ) {
+        
+        // Ocultamos las secciones que sobran
+        remove_menu_page( 'edit.php' );                   // Entradas
+        // remove_menu_page( 'edit.php?post_type=page' );    // Páginas
+        remove_menu_page( 'edit-comments.php' );          // Comentarios
+        remove_menu_page( 'tools.php' );                  // Herramientas
+        remove_menu_page( 'wpcf7' );                      // Contacto (Contact Form 7)
+        
+    }
+}
+add_action( 'admin_menu', 'blindar_panel_cliente_servitec', 999 );
