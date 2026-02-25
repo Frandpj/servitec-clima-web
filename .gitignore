@@ -1,0 +1,5 @@
+# Ignorar archivos de configuración y backups pesados
+*.wpress
+*.zip
+*.log
+.DS_Store

@@ -1,0 +1,397 @@
+/* HOME */
+
+/* 1. Definición de tu variable corporativa */
+:root {
+    --azul-servitec: #32a9c3; 
+}
+
+/* 2. Forzar que el contenido de la Home respire (Quita el recuadro blanco feo) */
+.home .site-content {
+    padding: 0 !important; /* Elimina márgenes laterales en la Home */
+    max-width: 100% !important;
+}
+
+.home .inside-article {
+    padding: 0 !important; /* Aprovecha todo el ancho */
+}
+
+/* 3. Estilo para el Texto del Hero (Encima de la imagen) */
+.wp-block-cover h1, 
+.wp-block-cover h2, 
+.wp-block-cover p {
+    color: #ffffff !important; /* El texto sobre la imagen siempre blanco */
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.5); /* Sombra para legibilidad */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 4. Títulos de sección (Fuera del Hero) */
+h1, h2, h3 {
+    color: var(--azul-servitec);
+    font-weight: 700;
+}
+
+/* 5. Tu botón mejorado con "aire" */
+.wp-block-button__link {
+    background-color: var(--azul-servitec) !important;
+    border-radius: 5px !important;
+    font-weight: bold !important;
+    padding: 15px 30px !important; /* Más padding para que se vea moderno */
+    transition: 0.3s;
+    text-transform: uppercase;
+    border: none !important;
+}
+
+.wp-block-button__link:hover {
+    background-color: #288ba1 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 6. Ajuste para el texto descriptivo que pondrás debajo */
+.seccion-descripcion {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Contenedor de los 3 puntos clave */
+.iconos-servitec {
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Un gris muy suave para resaltar la sección */
+    text-align: center;
+}
+
+.iconos-servitec h3 {
+    color: var(--azul-servitec); /* Tu azul corporativo */
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+.iconos-servitec p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Efecto hover para que parezca moderno */
+.iconos-servitec .wp-block-column {
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.iconos-servitec .wp-block-column:hover {
+    transform: translateY(-10px);
+}
+
+/* Ajuste específico para el botón dentro del Cover */
+.wp-block-cover .wp-block-buttons {
+    margin-top: 25px !important; /* Separa el botón del texto */
+    margin-bottom: 10px !important;
+}
+
+.wp-block-cover .wp-block-button__link {
+    /* Azul corporativo servitec */
+    background-color: var(--azul-servitec) !important; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra para que flote sobre la imagen */
+}
+
+/* Estilo para la sección descriptiva de la Home */
+.seccion-descripcion h2 {
+    font-size: 2.2rem !important;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Línea decorativa bajo el título */
+.seccion-descripcion h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--azul-servitec);
+}
+
+.seccion-descripcion p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Resaltar las negritas con un tono sutil del azul */
+.seccion-descripcion strong {
+    color: #2a8a9e;
+}
+
+/* SERVICIOS */
+
+/* Layout de la cuadrícula */
+.contenedor-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo de la Card */
+.card-servicio {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card-servicio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(50, 169, 195, 0.15);
+    border-color: #32a9c3;
+}
+
+/* Imagen de la card */
+.card-img-wrapper img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido de la card */
+.card-content {
+    padding: 25px;
+}
+
+.card-content h2 {
+    color: #32a9c3;
+    font-size: 1.4rem !important;
+    margin-bottom: 12px !important;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.link-consulta {
+    color: #e67e22 !important;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+    transition: 0.2s;
+}
+
+.link-consulta:hover {
+    padding-left: 5px;
+}
+
+/* GALERIA */
+
+/* Quitamos el margen lateral que la deja estrecha */
+.page-id-galeria #content {
+    margin: 0 auto !important;
+}
+
+/* GALERIA ESTILOS */
+
+.page-id-galeria .wp-block-gallery {
+    gap: 25px !important;
+    padding-top: 30px;
+}
+
+.wp-block-gallery .wp-block-image img {
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #eee;
+}
+
+.wp-block-gallery .wp-block-image img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 20px rgba(50, 169, 195, 0.3);
+    border-color: #32a9c3;
+    cursor: pointer;
+}
+
+.page-id-galeria h1 {
+    color: #32a9c3;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-align: center; /* Centramos el título también */
+}
+
+/* PIE DE PÁGINA (EL BLOQUE GRIS) */
+
+/* Idéntica a servicios */
+.servicios-footer {
+    background-color: #f9f9f9 !important; /* Gris muy clarito para que no quede raro */
+    padding: 60px 20px !important;
+    margin-top: 50px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Que ocupe todo el ancho del contenedor */
+    border-radius: 10px;
+}
+
+.servicios-footer h2 {
+    color: #32a9c3 !important;
+    margin-bottom: 15px !important;
+}
+
+.servicios-footer .wp-block-buttons {
+    justify-content: center !important;
+    margin-top: 20px !important;
+}
+
+/* CONTACTO */
+
+/* --- ESTILOS PÁGINA DE CONTACTO --- */
+
+.formulario-servitec .campo {
+    margin-bottom: 20px;
+}
+
+.formulario-servitec label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Estilo de los inputs y textarea */
+.formulario-servitec input[type="text"],
+.formulario-servitec input[type="email"],
+.formulario-servitec textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+/* Efecto al hacer clic en el campo */
+.formulario-servitec input:focus,
+.formulario-servitec textarea:focus {
+    border-color: var(--azul-servitec) !important;
+    outline: none;
+    box-shadow: 0 0 8px rgba(50, 169, 195, 0.2);
+}
+
+/* Estilo del botón de enviar de CF7 */
+.formulario-servitec input[type="submit"] {
+    background-color: var(--azul-servitec);
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.formulario-servitec input[type="submit"]:hover {
+    background-color: #288ba1;
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+/* --- FOOTER PROFESIONAL --- */
+.site-footer {
+    background-color: #1a1a1a !important; /* Negro casi total */
+    padding: 20px 0 !important;
+}
+
+/* Eliminamos el fondo blanco y los bordes que mete el tema */
+.site-info {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    padding: 20px !important;
+    border: none !important;
+}
+
+.copyright-bar {
+    display: block;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* Estilo de los enlaces del footer */
+.site-info a {
+    color: var(--azul-servitec) !important;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.site-info a:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
+/* --- HEADER PROFESIONAL CON LOGO --- */
+
+.site-header {
+    background-color: #ffffff; /* Blanco limpio */
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0; /* Línea sutil de separación */
+}
+
+/* Tamaño del logo para que no se desmadre */
+.site-logo img {
+    max-height: 80px; /* Ajusta este valor según tu logo */
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.site-logo img:hover {
+    transform: scale(1.05); /* Efecto sutil al pasar el ratón */
+}
+
+/* Alineación del menú con el logo */
+.main-navigation {
+    margin-top: 10px;
+}
+
+.main-navigation .main-nav ul li a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Convertir el último item del menú en un botón */
+.main-navigation .main-nav ul li:last-child a {
+    background-color: var(--azul-servitec);
+    color: #ffffff !important;
+    border-radius: 5px;
+    padding: 10px 20px !important;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.main-navigation .main-nav ul li:last-child a:hover {
+    background-color: #288ba1;
+    transform: translateY(-2px);
+}
+
+/* Hace el enlace a politica de privacidad se vea mas pequeño y oscurecido*/
+.site-info a[href*="politica-privacidad"] {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    font-weight: normal !important;
+}
